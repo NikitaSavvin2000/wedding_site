@@ -10,6 +10,9 @@ COPY package.json yarn.lock ./
 # Активируем Corepack и устанавливаем Yarn
 RUN npm install -g corepack && corepack enable && corepack prepare yarn@4.9.1 --activate
 
+# Устанавливаем недостающие зависимости автоматически
+RUN yarn add react react-dom && yarn add -D @types/react
+
 # Устанавливаем зависимости (без --immutable, чтобы не падало)
 RUN yarn install
 
