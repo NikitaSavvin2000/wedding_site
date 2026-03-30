@@ -15,15 +15,15 @@ export const THEME_CONFIG = {
       desktop: '100%', // В grid-колонках это будет 1/3 ширины
     },
     imageHeight: {
-      mobile: '400px',
-      desktop: '500px', // Высота изображения
+      mobile: '250px',
+      desktop: '250px', // Высота изображения
     },
     cardPadding: {
-      mobile: 'p-10',
-      desktop: 'p-12', // Padding внутри карточки
+      mobile: 'p-7',
+      desktop: 'p-7', // Padding внутри карточки
     },
     // Максимальная ширина контейнера для карточек
-    containerMaxWidth: '1700px',
+    containerMaxWidth: '1600px',
   },
   
   // Параметры фильтра для фотографий программы дня

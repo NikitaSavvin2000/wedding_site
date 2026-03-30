@@ -50,7 +50,7 @@ export function InvitationSection() {
           style={{ backgroundColor: '#FFF9E2' }}
         >
           <div
-            className="text-8xl md:text-8xl mb-3"
+            className="text-4xl md:text-5xl mb-3"
             style={{
               fontFamily: 'Montserrat, sans-serif',
               color: '#CDD4B1',
