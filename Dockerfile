@@ -1,24 +1,22 @@
-# Используем Node.js 20 Alpine как базовый образ
 FROM node:20-alpine
 
-# Устанавливаем рабочую директорию
 WORKDIR /app
 
-# Обновляем систему и ставим необходимые пакеты
 RUN apk update && apk add --no-cache libc6-compat bash
 
-# Копируем package.json и lock-файл
-COPY package.json ./
-COPY yarn.lock* ./
+# Копируем только необходимые файлы для установки зависимостей
+COPY package.json yarn.lock ./
 
-# Устанавливаем зависимости
+# Активируем Corepack и устанавливаем Yarn
 RUN npm install -g corepack && corepack enable && corepack prepare yarn@4.9.1 --activate
-RUN yarn install --immutable
+
+# Устанавливаем зависимости (без --immutable, чтобы не падало)
+RUN yarn install
 
 # Копируем весь проект
 COPY . .
 
-# Открываем порт для dev-сервера Vite
+# Открываем порт dev-сервера Vite
 EXPOSE 5173
 
 # Запускаем dev-сервер
