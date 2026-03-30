@@ -17,6 +17,6 @@ export default defineConfig({
   preview: {
     host: '0.0.0.0',
     port: 8080,
-    allowedHosts: true,
+    allowedHosts: "nikitasavvin2000-wedding-site-3eb4.twc1.net",
   },
 })
