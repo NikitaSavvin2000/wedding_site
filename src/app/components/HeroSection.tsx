@@ -11,7 +11,7 @@ export function HeroSection({ scrollY }: HeroSectionProps) {
   const { hero } = SITE_TEXTS;
   
   return (
-    <section className="relative h-screen flex items-end justify-center overflow-hidden pb-0">
+    <section className="relative h-screen flex items-end justify-center overflow-hidden pb-20 ">
       {/* Background Image with Parallax */}
       <div 
         className="absolute inset-0"
