@@ -24,4 +24,4 @@ COPY . .
 RUN yarn build
 
 # Старт приложения
-CMD ["yarn", "start"]
+CMD ["yarn", "preview"]
